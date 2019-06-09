@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My First API App</title>
+        <link href="style.css" rel="stylesheet" type= "text/css"><!---- Link to CSS--->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--- Allows for adjustments with device width--->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> <!---Materialize CSS Library -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat"> <!---- Link to Google Font -->
+    </head>
+    <body>
+        <div class ="container">
+            <div class="card white">
+                <div class = "row">
+                    <h1 style ="text-align: center" class ="blue-text">News & Gifs</h1>
+                    <div class="input-field col s6">
+                    <input placeholder="Keyword" id="query" type="text" class="validate">
+                    </div>
+                </div>
+                <div class = "row">
+                    <div class = "col">
+                    <a class="waves-effect waves-light btn-small blue lighten-2" onclick ="submitQuery()">Submit</a> <!---- THis is the button -->
+                    <a class="waves-effect waves-light btn-small blue lighten-2" onclick ="refresh()">Refresh</a> <!---- THis is the button -->
+                    <p class = 'blue-text'>Type in a keyword to get related gifs from Giphy API and Article Titles with links from the New York Times</p>
+                    <p class = 'red-text'>If you get no results then your keyword was invalid. Click "Refresh" and try another keyword</p>
+                    <p class = 'red-text'> You MUST click "Refresh" before you begin a new search</p>
+                    <p class = 'green-text'>ENJOY!</p>
+                    </div>
+                    
+                </div>
+                </div>
+        <div class = "results" style = "text-align:center">
+            <div class = "col">
+        <div class = "row" id="relatedGifs"></div>
+            <div class ="row" id ="row0"></div><!-- This is where we are saving our images -->
+            <div class ="row" id ="row1"></div>
+            <div class ="row" id ="row2"></div>
+            <div class ="row" id ="row3"></div>
+            <div class ="row" id ="row4"></div>
+            </div>
+            <div class = "col">
+        <div class = "row" id="relatedArticles"></div>
+        <div clas = "row" id ='articles'></div><!-- This is where we are saving our article links-->
+            </div>
+            </div>
+        </div><!-- Closes COntainer div-->
+        <script src="script.js"></script> <!---- link to js -->
+    </body>
+</html>
